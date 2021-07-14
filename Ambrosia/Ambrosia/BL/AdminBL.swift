@@ -26,6 +26,13 @@ class AdminBL: NSObject {
             
             obj.servidor = servidor
             obj.licencia = text
+            obj.cajcod = "00"
+            obj.impres1 = "0"
+            obj.impres2 = "0"
+            obj.resumen = "0"
+            obj.qrcuenta = "0"
+            obj.almcod = "A1"
+            obj.sednum = "1"
             
             Configuration.sharedInstance.configurationUrlServices = obj.servidor
             

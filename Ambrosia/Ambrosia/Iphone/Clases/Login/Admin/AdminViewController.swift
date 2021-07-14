@@ -58,9 +58,11 @@ class AdminViewController: UIViewController {
         if let _ = CDLicencia.listarTodos().first{
             CDLicencia.deleteLicencia()
             CDLicencia.save(licencia: self.objLincencia)
-            self.dismiss(animated: true) {}
+            self.dismiss(animated: true) {
+                self.delegate?.reiniciarApp(controller: self, state: false)                
+            }
         }else{
-            self.dismiss(animated: true, completion: nil)
+            self.dismiss(animated: true) {}
         }
     }
     
@@ -98,7 +100,6 @@ extension AdminViewController {
             self.objLincencia.sednum = licencia.sednum ?? ""
             self.objLincencia.licencia = self.txtLicencia.text ?? ""
             self.objLincencia.servidor = self.lblServidor.text ?? ""
-            
             
             self.loadCaja()
             self.loadImpresora()
@@ -153,23 +154,22 @@ extension AdminViewController {
         AdminBL.getImpresoraOne { array in
             self.arrayImpresora = array
             
-            self.lblImpresora.text = array.filter({$0.impresora_desc == self.objLincencia.impres1 }).first?.impresora_desc
-            self.lblTwoImpresora.text = array.filter({$0.impresora_desc == self.objLincencia.impres2 }).first?.impresora_desc
+            self.lblImpresora.text = array.filter({$0.impresora_cod == self.objLincencia.impres1 }).first?.impresora_desc
+            self.lblTwoImpresora.text = array.filter({$0.impresora_cod == self.objLincencia.impres2 }).first?.impresora_desc
         }
     }
     
     private func loadResumen(){
         AdminBL.getResumen { array in
             self.arrayResumen = array
-            self.lblResumenCocina.text = array.first?.resumen_desc
-            self.lblResumenCocina.text = array.filter({$0.resumen_desc == self.objLincencia.resumen}).first?.resumen_desc
+            self.lblResumenCocina.text = array.filter({$0.resumen_cod == self.objLincencia.resumen}).first?.resumen_desc
         }
     }
     
     private func loadQr(){
         AdminBL.getQR { array in
             self.arrayQr = array
-            self.lblQRCuenta.text = array.filter({$0.qr_desc == self.objLincencia.qrcuenta}).first?.qr_desc
+            self.lblQRCuenta.text = array.filter({$0.qr_cod == self.objLincencia.qrcuenta}).first?.qr_desc
         }
     }
     
@@ -245,19 +245,19 @@ extension AdminViewController : PickerGeneralViewControllerDelegate{
         }else if let impresora = sender as? ImpresoraBE{
             if tag == 1{
                 self.lblImpresora.text = impresora.impresora_desc
-                self.objLincencia.impres1 = impresora.impresora_desc ?? ""
+                self.objLincencia.impres1 = impresora.impresora_cod ?? ""
             }else{
                 self.lblTwoImpresora.text = impresora.impresora_desc
-                self.objLincencia.impres2 = impresora.impresora_desc ?? ""
+                self.objLincencia.impres2 = impresora.impresora_cod ?? ""
             }
             
         }else if let resumen = sender as? ResumenBE {
             self.lblResumenCocina.text = resumen.resumen_desc
-            self.objLincencia.resumen = resumen.resumen_desc ?? ""
+            self.objLincencia.resumen = resumen.resumen_cod ?? ""
             
         }else if let qr = sender as? QrBE{
             self.lblQRCuenta.text = qr.qr_desc
-            self.objLincencia.qrcuenta = qr.qr_desc ?? ""
+            self.objLincencia.qrcuenta = qr.qr_cod ?? ""
             
         }else if let almacen = sender as? AlmacenBE{
             self.lblAlmacen.text = almacen.almdes

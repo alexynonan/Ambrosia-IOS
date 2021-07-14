@@ -17,7 +17,7 @@ class UserBL: NSObject {
         
         if let objUser = CDUsuario.listarTodos().first{
             
-            let userBE = UserBE ()
+            let userBE = UserBE()
             
             userBE.patpas = objUser.patpas
             userBE.usucod = objUser.usucod

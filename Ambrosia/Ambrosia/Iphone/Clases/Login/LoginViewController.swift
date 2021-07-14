@@ -92,19 +92,20 @@ extension LoginViewController {
     
     private func eventAdmin(){
         
-//        self.indexSelect += 1
-
-//        if self.indexSelect == 10{
-
-//            self.indexSelect = 0
-
-            self.performSegue(withIdentifier: Segue.AdminViewController, sender: nil)
-//        }
+        self.indexSelect += 1
+        
+        switch self.indexSelect {
+        
+        case 10:
+            self.indexSelect = 0
+            self.performSegue(withIdentifier: Segue.AdminViewController, sender: nil)            
+        default:
+            return
+        }
     }
 }
 
 //MARK: -ProtocolDelegate AdminPopApp - Security Code
-
 extension LoginViewController : AdminViewControllerDelegate, SecurityViewControllerDelegate{
     
     func reiniciarApp(controller: AdminViewController, state: Bool) {
@@ -133,7 +134,6 @@ extension LoginViewController : AdminViewControllerDelegate, SecurityViewControl
 
 
 //MARK: -CollectionView
-
 extension LoginViewController  : UICollectionViewDelegate, UICollectionViewDataSource, UICollectionViewDelegateFlowLayout{
 
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

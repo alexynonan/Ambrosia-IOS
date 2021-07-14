@@ -55,6 +55,8 @@ class HomeViewController: UIViewController {
         if let controller = segue.destination as? MenuViewController{
             controller.delegate = self
             controller.objUse = self.objUser
+        }else if let controller = segue.destination as? AdminViewController{
+            controller.delegate = self
         }
     }
     
@@ -142,7 +144,7 @@ extension HomeViewController : AdminViewControllerDelegate{
             self.generalSession()
             self.navigationController?.popToRootViewController(animated: true)
         }else{
-            
+            self.loadBalance()
         }
     }
 }

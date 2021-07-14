@@ -1,0 +1,195 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Picker Date View Controller-->
+        <scene sceneID="64F-Bs-DRp">
+            <objects>
+                <viewController storyboardIdentifier="PickerDateViewController" modalPresentationStyle="overFullScreen" id="745-XU-pFQ" customClass="PickerDateViewController" customModule="Ambrosia" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="afz-AS-5o3">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Bta-c6-rd4">
+                                <rect key="frame" x="0.0" y="636" width="414" height="260"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fvX-OS-iBV">
+                                        <rect key="frame" x="295" y="0.0" width="110" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="34" id="83R-4P-Cvx"/>
+                                            <constraint firstAttribute="width" constant="110" id="QVL-UF-RSm"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
+                                        <color key="tintColor" red="0.0" green="0.36470588240000001" blue="0.6705882353" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Hecho">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tapClose:" destination="745-XU-pFQ" eventType="touchUpInside" id="Ocr-ZL-yTs"/>
+                                        </connections>
+                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="RE5-8W-Rmi">
+                                        <rect key="frame" x="0.0" y="34" width="414" height="226"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    </view>
+                                    <datePicker contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" datePickerMode="dateAndTime" minuteInterval="1" style="wheels" translatesAutoresizingMaskIntoConstraints="NO" id="9jy-8U-Nq6">
+                                        <rect key="frame" x="0.0" y="34" width="414" height="226"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <locale key="locale" localeIdentifier="es_PE"/>
+                                        <connections>
+                                            <action selector="seleccionoFecha:" destination="745-XU-pFQ" eventType="valueChanged" id="OYu-dr-UHh"/>
+                                        </connections>
+                                    </datePicker>
+                                </subviews>
+                                <color key="backgroundColor" red="0.87650042770000003" green="0.39082247019999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="fvX-OS-iBV" firstAttribute="top" secondItem="Bta-c6-rd4" secondAttribute="top" id="7od-1h-QmP"/>
+                                    <constraint firstAttribute="bottom" secondItem="9jy-8U-Nq6" secondAttribute="bottom" id="AH5-Ue-1a2"/>
+                                    <constraint firstAttribute="trailing" secondItem="9jy-8U-Nq6" secondAttribute="trailing" id="I43-bf-3ZQ"/>
+                                    <constraint firstAttribute="bottom" secondItem="RE5-8W-Rmi" secondAttribute="bottom" id="JXw-k0-3G5"/>
+                                    <constraint firstItem="RE5-8W-Rmi" firstAttribute="top" secondItem="Bta-c6-rd4" secondAttribute="top" constant="34" id="Y5I-vH-aNg"/>
+                                    <constraint firstAttribute="height" constant="260" id="Yf4-xH-X4R"/>
+                                    <constraint firstItem="9jy-8U-Nq6" firstAttribute="top" secondItem="Bta-c6-rd4" secondAttribute="top" constant="34" id="ZFL-JE-PCS"/>
+                                    <constraint firstItem="RE5-8W-Rmi" firstAttribute="leading" secondItem="Bta-c6-rd4" secondAttribute="leading" id="b7n-Ix-3nt"/>
+                                    <constraint firstAttribute="trailing" secondItem="fvX-OS-iBV" secondAttribute="trailing" constant="9" id="cud-hC-O3f"/>
+                                    <constraint firstAttribute="trailing" secondItem="RE5-8W-Rmi" secondAttribute="trailing" id="kkW-DN-mnd"/>
+                                    <constraint firstItem="9jy-8U-Nq6" firstAttribute="leading" secondItem="Bta-c6-rd4" secondAttribute="leading" id="u6r-BI-fsS"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="XQu-PT-2sL">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="636"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="M4d-dm-E5K" appends="YES" id="biW-qo-4hy"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="NE7-U2-Iri"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="Bta-c6-rd4" firstAttribute="top" secondItem="XQu-PT-2sL" secondAttribute="bottom" id="4fV-Ci-Se8"/>
+                            <constraint firstItem="NE7-U2-Iri" firstAttribute="trailing" secondItem="Bta-c6-rd4" secondAttribute="trailing" id="Apy-y2-peK"/>
+                            <constraint firstItem="XQu-PT-2sL" firstAttribute="leading" secondItem="NE7-U2-Iri" secondAttribute="leading" id="Tnj-IU-t6A"/>
+                            <constraint firstItem="NE7-U2-Iri" firstAttribute="trailing" secondItem="XQu-PT-2sL" secondAttribute="trailing" id="XC1-aU-hLz"/>
+                            <constraint firstItem="Bta-c6-rd4" firstAttribute="leading" secondItem="NE7-U2-Iri" secondAttribute="leading" id="hT4-v0-6dy"/>
+                            <constraint firstItem="XQu-PT-2sL" firstAttribute="top" secondItem="afz-AS-5o3" secondAttribute="top" id="ouf-oo-G23"/>
+                            <constraint firstAttribute="bottom" secondItem="Bta-c6-rd4" secondAttribute="bottom" id="uWk-tf-WwT"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="constraintBottomPicker" destination="uWk-tf-WwT" id="2D3-qx-Vxt"/>
+                        <outlet property="constraintHeightContainer" destination="Yf4-xH-X4R" id="kOx-PK-YkO"/>
+                        <outlet property="pickerDate" destination="9jy-8U-Nq6" id="nYF-gX-aUs"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="9Gc-AR-nGX" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="M4d-dm-E5K">
+                    <connections>
+                        <action selector="tapClose:" destination="745-XU-pFQ" id="rD2-Qd-yrL"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-1620" y="150"/>
+        </scene>
+        <!--Picker General View Controller-->
+        <scene sceneID="LNG-Wp-d8g">
+            <objects>
+                <viewController storyboardIdentifier="PickerGeneralViewController" modalPresentationStyle="overFullScreen" id="IY3-W8-uQm" customClass="PickerGeneralViewController" customModule="Ambrosia" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="XoI-8e-y4y">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2gP-3t-ogG">
+                                <rect key="frame" x="0.0" y="636" width="414" height="260"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="MhE-EK-eq0">
+                                        <rect key="frame" x="295" y="0.0" width="110" height="34"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="34" id="2jn-V2-SaQ"/>
+                                            <constraint firstAttribute="width" constant="110" id="wKC-Dr-L0J"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="HelveticaNeue-Bold" family="Helvetica Neue" pointSize="18"/>
+                                        <color key="tintColor" red="0.0" green="0.36470588240000001" blue="0.6705882353" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        <state key="normal" title="Hecho">
+                                            <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        </state>
+                                        <connections>
+                                            <action selector="tapClose:" destination="IY3-W8-uQm" eventType="touchUpInside" id="tDq-ef-AST"/>
+                                        </connections>
+                                    </button>
+                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="c5f-hb-TZI">
+                                        <rect key="frame" x="0.0" y="34" width="414" height="1"/>
+                                        <color key="backgroundColor" white="0.33333333329999998" alpha="0.32080227449999998" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="1" id="7dR-ZT-bek"/>
+                                        </constraints>
+                                    </view>
+                                    <pickerView contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Akj-Fb-rRG">
+                                        <rect key="frame" x="0.0" y="35" width="414" height="225"/>
+                                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                        <connections>
+                                            <outlet property="dataSource" destination="IY3-W8-uQm" id="hox-WC-xrM"/>
+                                            <outlet property="delegate" destination="IY3-W8-uQm" id="1UG-jE-C1X"/>
+                                        </connections>
+                                    </pickerView>
+                                </subviews>
+                                <color key="backgroundColor" red="0.87650042770000003" green="0.39082247019999999" blue="0.0" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <constraints>
+                                    <constraint firstItem="c5f-hb-TZI" firstAttribute="leading" secondItem="2gP-3t-ogG" secondAttribute="leading" id="A92-hT-RFh"/>
+                                    <constraint firstAttribute="bottom" secondItem="Akj-Fb-rRG" secondAttribute="bottom" id="FKX-6d-ZpN"/>
+                                    <constraint firstAttribute="trailing" secondItem="MhE-EK-eq0" secondAttribute="trailing" constant="9" id="OgQ-A6-dpq"/>
+                                    <constraint firstItem="Akj-Fb-rRG" firstAttribute="leading" secondItem="2gP-3t-ogG" secondAttribute="leading" id="Rfs-GD-uB5"/>
+                                    <constraint firstItem="MhE-EK-eq0" firstAttribute="top" secondItem="2gP-3t-ogG" secondAttribute="top" id="e3x-II-Ww0"/>
+                                    <constraint firstItem="c5f-hb-TZI" firstAttribute="top" secondItem="2gP-3t-ogG" secondAttribute="top" constant="34" id="eC0-iX-DuZ"/>
+                                    <constraint firstItem="Akj-Fb-rRG" firstAttribute="top" secondItem="c5f-hb-TZI" secondAttribute="bottom" id="k8s-9I-uCh"/>
+                                    <constraint firstAttribute="trailing" secondItem="c5f-hb-TZI" secondAttribute="trailing" id="psB-nR-B1u"/>
+                                    <constraint firstAttribute="height" constant="260" id="sYd-ed-R1r"/>
+                                    <constraint firstAttribute="trailing" secondItem="Akj-Fb-rRG" secondAttribute="trailing" id="x8N-sQ-ac9"/>
+                                </constraints>
+                            </view>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="UkD-pW-aXu">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="636"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <gestureRecognizers/>
+                                <connections>
+                                    <outletCollection property="gestureRecognizers" destination="kKu-fj-wt6" appends="YES" id="ZoX-Ip-xOl"/>
+                                </connections>
+                            </view>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="CHk-gN-6JK"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                        <gestureRecognizers/>
+                        <constraints>
+                            <constraint firstItem="2gP-3t-ogG" firstAttribute="top" secondItem="UkD-pW-aXu" secondAttribute="bottom" id="6YZ-Qz-tXw"/>
+                            <constraint firstItem="CHk-gN-6JK" firstAttribute="trailing" secondItem="UkD-pW-aXu" secondAttribute="trailing" id="921-BR-HnV"/>
+                            <constraint firstAttribute="bottom" secondItem="2gP-3t-ogG" secondAttribute="bottom" id="JWZ-aM-DKG"/>
+                            <constraint firstItem="2gP-3t-ogG" firstAttribute="leading" secondItem="CHk-gN-6JK" secondAttribute="leading" id="LBl-yX-MAE"/>
+                            <constraint firstItem="UkD-pW-aXu" firstAttribute="top" secondItem="XoI-8e-y4y" secondAttribute="top" id="TP7-y8-EoT"/>
+                            <constraint firstItem="UkD-pW-aXu" firstAttribute="leading" secondItem="CHk-gN-6JK" secondAttribute="leading" id="VzD-rY-unS"/>
+                            <constraint firstItem="CHk-gN-6JK" firstAttribute="trailing" secondItem="2gP-3t-ogG" secondAttribute="trailing" id="aY4-VG-daM"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="constraintBottomPicker" destination="JWZ-aM-DKG" id="J4P-ib-l6D"/>
+                        <outlet property="constraintHeightContainer" destination="sYd-ed-R1r" id="RyA-ad-VoC"/>
+                        <outlet property="pickerGeneral" destination="Akj-Fb-rRG" id="idD-PK-Lrg"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eBJ-lf-zpA" userLabel="First Responder" sceneMemberID="firstResponder"/>
+                <tapGestureRecognizer id="kKu-fj-wt6">
+                    <connections>
+                        <action selector="tapClose:" destination="IY3-W8-uQm" id="FKU-oO-pfN"/>
+                    </connections>
+                </tapGestureRecognizer>
+            </objects>
+            <point key="canvasLocation" x="-941" y="150"/>
+        </scene>
+    </scenes>
+</document>

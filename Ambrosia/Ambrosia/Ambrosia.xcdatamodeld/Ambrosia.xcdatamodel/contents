@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="18154" systemVersion="20F71" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
+    <entity name="Licencia" representedClassName="Licencia" syncable="YES" codeGenerationType="class">
+        <attribute name="almcod" optional="YES" attributeType="String"/>
+        <attribute name="cajcod" optional="YES" attributeType="String"/>
+        <attribute name="impres1" optional="YES" attributeType="String"/>
+        <attribute name="impres2" optional="YES" attributeType="String"/>
+        <attribute name="licencia" optional="YES" attributeType="String"/>
+        <attribute name="qrcuenta" optional="YES" attributeType="String"/>
+        <attribute name="resumen" optional="YES" attributeType="String"/>
+        <attribute name="sednum" optional="YES" attributeType="String"/>
+        <attribute name="servidor" optional="YES" attributeType="String"/>
+    </entity>
+    <entity name="Usuario" representedClassName="Usuario" syncable="YES" codeGenerationType="class">
+        <attribute name="patpas" optional="YES" attributeType="String"/>
+        <attribute name="usucod" optional="YES" attributeType="String"/>
+        <attribute name="usudes" optional="YES" attributeType="String"/>
+        <attribute name="usunam" optional="YES" attributeType="String"/>
+    </entity>
+    <elements>
+        <element name="Licencia" positionX="-63" positionY="-18" width="128" height="14"/>
+        <element name="Usuario" positionX="-260.8216552734375" positionY="-27.28118896484375" width="111.589599609375" height="89"/>
+    </elements>
+</model>

@@ -23,4 +23,11 @@ class Closures: NSObject {
     public typealias Balance                    = (_ arrayBE  : [BalanceBE])                 -> Void
     public typealias UserObject                 = (_ objBE    :  UserBE )                    -> Void
     public typealias BalanceResumen             = (_ arrayBE  : [BalanceResumenBE])          -> Void
+    public typealias Ventas                     = (_ arrayBE  : [VentasBE])                  -> Void
+    public typealias Pago                       = (_ arrayBE  : [PagoBE])                    -> Void
+    public typealias Check                      = (_ arrayBE  : [CheckBE])                   -> Void
+    public typealias Tarjeta                    = (_ arrayBE  : [TarjetaBE])                   -> Void
+    public typealias Banco                      = (_ arrayBE  : [BancoBE])                   -> Void
+    public typealias Cortesia                   = (_ arrayBE  : [CortesiaBE])                   -> Void
+    
 }

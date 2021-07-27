@@ -106,6 +106,15 @@ extension PickerGeneralViewController : UIPickerViewDelegate, UIPickerViewDataSo
             
         }else if let local : SedesBE = self.arrayGeneral[row] as? SedesBE {
             return local.seddes
+            
+        }else if let tarjeta : TarjetaBE = self.arrayGeneral[row] as? TarjetaBE{
+            return tarjeta.name
+            
+        }else if let banco : BancoBE = self.arrayGeneral[row] as? BancoBE{
+            return banco.name
+            
+        }else if let cortesia : CortesiaBE = self.arrayGeneral[row] as? CortesiaBE{
+            return cortesia.name
         }
         
         return self.arrayGeneral[row] as? String ?? ""

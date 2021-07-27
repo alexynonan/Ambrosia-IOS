@@ -104,10 +104,4 @@ extension SecurityViewController {
         }
     }
 
-    private func animateBackGround(color : UIColor){
-        UIView.animate(withDuration: 0.5) {
-            self.view.backgroundColor = color
-            self.view.layoutIfNeeded()
-        }
-    }
 }

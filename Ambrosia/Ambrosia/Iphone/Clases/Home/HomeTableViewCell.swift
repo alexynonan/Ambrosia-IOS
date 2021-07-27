@@ -12,6 +12,8 @@ class HomeTableViewCell: UITableViewCell {
     @IBOutlet weak private var btnTitle : UIButton!
     @IBOutlet weak private var lblTitle : UILabel!
     
+    var controller : UIViewController?
+    
     var objBE : BalanceResumenBE!{
         didSet{
             self.lblTitle.text = self.objBE.totdes
@@ -31,6 +33,12 @@ class HomeTableViewCell: UITableViewCell {
             self.lblTitle.textColor = .red
             self.btnTitle.setTitleColor(.red, for: .normal)
         }
+    }
+    
+    @IBAction private func btnSelect(_ sender : Any?){
+        if self.objBE.totcod == "VEN"{
+            self.controller?.performSegue(withIdentifier: Segue.VentasViewController, sender: self.objBE)
+        }        
     }
     
     override func awakeFromNib() {

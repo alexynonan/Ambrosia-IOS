@@ -1,6 +1,7 @@
 <?xml version="1.0" encoding="UTF-8" standalone="yes"?>
 <model type="com.apple.IDECoreDataModeler.DataModel" documentVersion="1.0" lastSavedToolsVersion="18154" systemVersion="20F71" minimumToolsVersion="Automatic" sourceLanguage="Swift" userDefinedModelVersionIdentifier="">
     <entity name="Licencia" representedClassName="Licencia" syncable="YES" codeGenerationType="class">
+        <attribute name="alex" optional="YES" attributeType="String"/>
         <attribute name="almcod" optional="YES" attributeType="String"/>
         <attribute name="cajcod" optional="YES" attributeType="String"/>
         <attribute name="impres1" optional="YES" attributeType="String"/>
@@ -18,7 +19,7 @@
         <attribute name="usunam" optional="YES" attributeType="String"/>
     </entity>
     <elements>
-        <element name="Licencia" positionX="-63" positionY="-18" width="128" height="14"/>
+        <element name="Licencia" positionX="-63" positionY="-18" width="128" height="179"/>
         <element name="Usuario" positionX="-260.8216552734375" positionY="-27.28118896484375" width="111.589599609375" height="89"/>
     </elements>
 </model>

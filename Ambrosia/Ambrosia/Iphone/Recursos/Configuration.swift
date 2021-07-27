@@ -11,7 +11,7 @@ class Configuration: NSObject {
 
     public static var sharedInstance = Configuration()
     
-    public var configurationUrlServices           = ServicesURL.adminURL
+    public var configurationUrlServices = ""
     
     class func startNotification() -> Void{
                 

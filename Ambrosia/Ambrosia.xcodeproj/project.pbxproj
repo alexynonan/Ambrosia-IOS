@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		952A1AE726AC6253009BD9B6 /* CheckTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952A1AE626AC6253009BD9B6 /* CheckTableViewCell.swift */; };
+		952A1AE926AC6655009BD9B6 /* PagoTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952A1AE826AC6655009BD9B6 /* PagoTableViewCell.swift */; };
 		952FCB62269CBCF200339D09 /* LoginCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952FCB61269CBCF200339D09 /* LoginCollectionViewCell.swift */; };
 		952FCB64269CBD1100339D09 /* UserBE.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952FCB63269CBD1100339D09 /* UserBE.swift */; };
 		952FCB66269CBD9800339D09 /* Constantes.swift in Sources */ = {isa = PBXBuildFile; fileRef = 952FCB65269CBD9800339D09 /* Constantes.swift */; };
@@ -16,6 +18,10 @@
 		952FCB70269CC4DF00339D09 /* Login.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 952FCB6F269CC4DF00339D09 /* Login.xcassets */; };
 		952FCB73269CD3EE00339D09 /* Home.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 952FCB72269CD3EE00339D09 /* Home.storyboard */; };
 		952FCB75269CD65A00339D09 /* Home.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 952FCB74269CD65A00339D09 /* Home.xcassets */; };
+		9530FAFC26AA2A21004D56A0 /* DetailVentasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9530FAFB26AA2A21004D56A0 /* DetailVentasViewController.swift */; };
+		9530FB0126AA3C0D004D56A0 /* CheckViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9530FB0026AA3C0D004D56A0 /* CheckViewController.swift */; };
+		9530FB0326AA3C19004D56A0 /* DocumentosViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9530FB0226AA3C19004D56A0 /* DocumentosViewController.swift */; };
+		9530FB0526AA3C21004D56A0 /* PagoViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9530FB0426AA3C21004D56A0 /* PagoViewController.swift */; };
 		9533AF36269E5BB1005598BA /* SecurityViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9533AF35269E5BB1005598BA /* SecurityViewController.swift */; };
 		9533AF38269E5FBA005598BA /* CDUsuario.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9533AF37269E5FBA005598BA /* CDUsuario.swift */; };
 		9535C3EC269E63C60017720A /* SplashViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 9535C3EB269E63C60017720A /* SplashViewController.swift */; };
@@ -41,9 +47,11 @@
 		953BE152269A679A0032EFAF /* CSMCrypto.swift in Sources */ = {isa = PBXBuildFile; fileRef = 953BE151269A679A0032EFAF /* CSMCrypto.swift */; };
 		954D0AB7269A6FD900F6C0DD /* LoginViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954D0AB6269A6FD900F6C0DD /* LoginViewController.swift */; };
 		954D0ABA269A725300F6C0DD /* AdminViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 954D0AB9269A725300F6C0DD /* AdminViewController.swift */; };
+		95728F8A26AC94C700D2E6E2 /* FormaDePagoAlertViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95728F8926AC94C700D2E6E2 /* FormaDePagoAlertViewController.swift */; };
 		95B8E36F269E8D7E00FB8C24 /* BalanceWS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B8E36E269E8D7E00FB8C24 /* BalanceWS.swift */; };
 		95B8E371269E8D9A00FB8C24 /* BalanceBE.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B8E370269E8D9A00FB8C24 /* BalanceBE.swift */; };
 		95B8E373269E8FF300FB8C24 /* BalanceBL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95B8E372269E8FF300FB8C24 /* BalanceBL.swift */; };
+		95CA899F26AFBFC7003F3724 /* AnularaViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95CA899E26AFBFC7003F3724 /* AnularaViewController.swift */; };
 		95D0E057269D3A3200F85A33 /* HomeViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D0E056269D3A3200F85A33 /* HomeViewController.swift */; };
 		95D0E05A269D3A9E00F85A33 /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D0E059269D3A9E00F85A33 /* MenuViewController.swift */; };
 		95D293D8269CE97B000B52EA /* AdminBE.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D293D7269CE97B000B52EA /* AdminBE.swift */; };
@@ -57,9 +65,18 @@
 		95D293E9269D2A75000B52EA /* UserWS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D293E8269D2A75000B52EA /* UserWS.swift */; };
 		95D293EB269D2B8B000B52EA /* UserBL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95D293EA269D2B8B000B52EA /* UserBL.swift */; };
 		95E81C66269E98D100A3053E /* HomeTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95E81C65269E98D100A3053E /* HomeTableViewCell.swift */; };
+		95F630FD26AB2F3D004AB060 /* ValidationsBL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F630FC26AB2F3D004AB060 /* ValidationsBL.swift */; };
+		95F8CAB426A9D61100EC26C7 /* Ventas.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 95F8CAB326A9D61100EC26C7 /* Ventas.storyboard */; };
+		95F8CAB726A9DA6C00EC26C7 /* VentasViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F8CAB626A9DA6C00EC26C7 /* VentasViewController.swift */; };
+		95F8CAB926A9DC5500EC26C7 /* VentasBL.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F8CAB826A9DC5500EC26C7 /* VentasBL.swift */; };
+		95F8CABB26A9E63E00EC26C7 /* VentasWS.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F8CABA26A9E63E00EC26C7 /* VentasWS.swift */; };
+		95F8CABD26A9E66D00EC26C7 /* VentasBE.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F8CABC26A9E66D00EC26C7 /* VentasBE.swift */; };
+		95F8CABF26A9EBB200EC26C7 /* VentasTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 95F8CABE26A9EBB200EC26C7 /* VentasTableViewCell.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		952A1AE626AC6253009BD9B6 /* CheckTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckTableViewCell.swift; sourceTree = "<group>"; };
+		952A1AE826AC6655009BD9B6 /* PagoTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagoTableViewCell.swift; sourceTree = "<group>"; };
 		952FCB61269CBCF200339D09 /* LoginCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginCollectionViewCell.swift; sourceTree = "<group>"; };
 		952FCB63269CBD1100339D09 /* UserBE.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBE.swift; sourceTree = "<group>"; };
 		952FCB65269CBD9800339D09 /* Constantes.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constantes.swift; sourceTree = "<group>"; };
@@ -69,6 +86,10 @@
 		952FCB6F269CC4DF00339D09 /* Login.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Login.xcassets; sourceTree = "<group>"; };
 		952FCB72269CD3EE00339D09 /* Home.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Home.storyboard; sourceTree = "<group>"; };
 		952FCB74269CD65A00339D09 /* Home.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Home.xcassets; sourceTree = "<group>"; };
+		9530FAFB26AA2A21004D56A0 /* DetailVentasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailVentasViewController.swift; sourceTree = "<group>"; };
+		9530FB0026AA3C0D004D56A0 /* CheckViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CheckViewController.swift; sourceTree = "<group>"; };
+		9530FB0226AA3C19004D56A0 /* DocumentosViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DocumentosViewController.swift; sourceTree = "<group>"; };
+		9530FB0426AA3C21004D56A0 /* PagoViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PagoViewController.swift; sourceTree = "<group>"; };
 		9533AF35269E5BB1005598BA /* SecurityViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SecurityViewController.swift; sourceTree = "<group>"; };
 		9533AF37269E5FBA005598BA /* CDUsuario.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CDUsuario.swift; sourceTree = "<group>"; };
 		9535C3EB269E63C60017720A /* SplashViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SplashViewController.swift; sourceTree = "<group>"; };
@@ -96,9 +117,11 @@
 		953BE151269A679A0032EFAF /* CSMCrypto.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CSMCrypto.swift; sourceTree = "<group>"; };
 		954D0AB6269A6FD900F6C0DD /* LoginViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoginViewController.swift; sourceTree = "<group>"; };
 		954D0AB9269A725300F6C0DD /* AdminViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminViewController.swift; sourceTree = "<group>"; };
+		95728F8926AC94C700D2E6E2 /* FormaDePagoAlertViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = FormaDePagoAlertViewController.swift; sourceTree = "<group>"; };
 		95B8E36E269E8D7E00FB8C24 /* BalanceWS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceWS.swift; sourceTree = "<group>"; };
 		95B8E370269E8D9A00FB8C24 /* BalanceBE.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceBE.swift; sourceTree = "<group>"; };
 		95B8E372269E8FF300FB8C24 /* BalanceBL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BalanceBL.swift; sourceTree = "<group>"; };
+		95CA899E26AFBFC7003F3724 /* AnularaViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AnularaViewController.swift; sourceTree = "<group>"; };
 		95D0E056269D3A3200F85A33 /* HomeViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewController.swift; sourceTree = "<group>"; };
 		95D0E059269D3A9E00F85A33 /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
 		95D293D7269CE97B000B52EA /* AdminBE.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminBE.swift; sourceTree = "<group>"; };
@@ -112,6 +135,13 @@
 		95D293E8269D2A75000B52EA /* UserWS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserWS.swift; sourceTree = "<group>"; };
 		95D293EA269D2B8B000B52EA /* UserBL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserBL.swift; sourceTree = "<group>"; };
 		95E81C65269E98D100A3053E /* HomeTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeTableViewCell.swift; sourceTree = "<group>"; };
+		95F630FC26AB2F3D004AB060 /* ValidationsBL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ValidationsBL.swift; sourceTree = "<group>"; };
+		95F8CAB326A9D61100EC26C7 /* Ventas.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = Ventas.storyboard; sourceTree = "<group>"; };
+		95F8CAB626A9DA6C00EC26C7 /* VentasViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VentasViewController.swift; sourceTree = "<group>"; };
+		95F8CAB826A9DC5500EC26C7 /* VentasBL.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VentasBL.swift; sourceTree = "<group>"; };
+		95F8CABA26A9E63E00EC26C7 /* VentasWS.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VentasWS.swift; sourceTree = "<group>"; };
+		95F8CABC26A9E66D00EC26C7 /* VentasBE.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VentasBE.swift; sourceTree = "<group>"; };
+		95F8CABE26A9EBB200EC26C7 /* VentasTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = VentasTableViewCell.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -146,6 +176,7 @@
 			isa = PBXGroup;
 			children = (
 				952FCB72269CD3EE00339D09 /* Home.storyboard */,
+				95F8CAB226A9D5FE00EC26C7 /* Ventas */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -156,8 +187,48 @@
 				95D0E056269D3A3200F85A33 /* HomeViewController.swift */,
 				95E81C65269E98D100A3053E /* HomeTableViewCell.swift */,
 				95D0E058269D3A8C00F85A33 /* Menu */,
+				95F8CAB526A9DA5100EC26C7 /* Ventas */,
 			);
 			path = Home;
+			sourceTree = "<group>";
+		};
+		9530FAFA26AA29C3004D56A0 /* Detail */ = {
+			isa = PBXGroup;
+			children = (
+				9530FAFB26AA2A21004D56A0 /* DetailVentasViewController.swift */,
+				95CA899E26AFBFC7003F3724 /* AnularaViewController.swift */,
+				9530FAFF26AA3B89004D56A0 /* Check */,
+				9530FAFD26AA3B72004D56A0 /* Documentos */,
+				9530FAFE26AA3B80004D56A0 /* Pago */,
+			);
+			path = Detail;
+			sourceTree = "<group>";
+		};
+		9530FAFD26AA3B72004D56A0 /* Documentos */ = {
+			isa = PBXGroup;
+			children = (
+				9530FB0226AA3C19004D56A0 /* DocumentosViewController.swift */,
+			);
+			path = Documentos;
+			sourceTree = "<group>";
+		};
+		9530FAFE26AA3B80004D56A0 /* Pago */ = {
+			isa = PBXGroup;
+			children = (
+				9530FB0426AA3C21004D56A0 /* PagoViewController.swift */,
+				952A1AE826AC6655009BD9B6 /* PagoTableViewCell.swift */,
+				95728F8826AC949900D2E6E2 /* FormaDePago */,
+			);
+			path = Pago;
+			sourceTree = "<group>";
+		};
+		9530FAFF26AA3B89004D56A0 /* Check */ = {
+			isa = PBXGroup;
+			children = (
+				9530FB0026AA3C0D004D56A0 /* CheckViewController.swift */,
+				952A1AE626AC6253009BD9B6 /* CheckTableViewCell.swift */,
+			);
+			path = Check;
 			sourceTree = "<group>";
 		};
 		9533AF34269E5B81005598BA /* Security */ = {
@@ -219,6 +290,7 @@
 				952FCB63269CBD1100339D09 /* UserBE.swift */,
 				95D293D7269CE97B000B52EA /* AdminBE.swift */,
 				95B8E370269E8D9A00FB8C24 /* BalanceBE.swift */,
+				95F8CABC26A9E66D00EC26C7 /* VentasBE.swift */,
 			);
 			path = BE;
 			sourceTree = "<group>";
@@ -226,9 +298,11 @@
 		953BE12D269A3D470032EFAF /* BL */ = {
 			isa = PBXGroup;
 			children = (
+				95F630FC26AB2F3D004AB060 /* ValidationsBL.swift */,
 				95D293E1269CF521000B52EA /* AdminBL.swift */,
 				95D293EA269D2B8B000B52EA /* UserBL.swift */,
 				95B8E372269E8FF300FB8C24 /* BalanceBL.swift */,
+				95F8CAB826A9DC5500EC26C7 /* VentasBL.swift */,
 			);
 			path = BL;
 			sourceTree = "<group>";
@@ -240,6 +314,7 @@
 				95D293D9269CF040000B52EA /* AdminWS.swift */,
 				95D293DD269CF128000B52EA /* GenericResponse.swift */,
 				95B8E36E269E8D7E00FB8C24 /* BalanceWS.swift */,
+				95F8CABA26A9E63E00EC26C7 /* VentasWS.swift */,
 			);
 			path = WS;
 			sourceTree = "<group>";
@@ -318,6 +393,14 @@
 			path = Admin;
 			sourceTree = "<group>";
 		};
+		95728F8826AC949900D2E6E2 /* FormaDePago */ = {
+			isa = PBXGroup;
+			children = (
+				95728F8926AC94C700D2E6E2 /* FormaDePagoAlertViewController.swift */,
+			);
+			path = FormaDePago;
+			sourceTree = "<group>";
+		};
 		95D0E058269D3A8C00F85A33 /* Menu */ = {
 			isa = PBXGroup;
 			children = (
@@ -333,6 +416,24 @@
 				9533AF37269E5FBA005598BA /* CDUsuario.swift */,
 			);
 			path = CoreData;
+			sourceTree = "<group>";
+		};
+		95F8CAB226A9D5FE00EC26C7 /* Ventas */ = {
+			isa = PBXGroup;
+			children = (
+				95F8CAB326A9D61100EC26C7 /* Ventas.storyboard */,
+			);
+			path = Ventas;
+			sourceTree = "<group>";
+		};
+		95F8CAB526A9DA5100EC26C7 /* Ventas */ = {
+			isa = PBXGroup;
+			children = (
+				95F8CAB626A9DA6C00EC26C7 /* VentasViewController.swift */,
+				95F8CABE26A9EBB200EC26C7 /* VentasTableViewCell.swift */,
+				9530FAFA26AA29C3004D56A0 /* Detail */,
+			);
+			path = Ventas;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -393,6 +494,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				953BE134269A3F890032EFAF /* Login.storyboard in Resources */,
+				95F8CAB426A9D61100EC26C7 /* Ventas.storyboard in Resources */,
 				952FCB70269CC4DF00339D09 /* Login.xcassets in Resources */,
 				953BE124269A3D270032EFAF /* LaunchScreen.storyboard in Resources */,
 				952FCB73269CD3EE00339D09 /* Home.storyboard in Resources */,
@@ -410,19 +512,25 @@
 			buildActionMask = 2147483647;
 			files = (
 				954D0AB7269A6FD900F6C0DD /* LoginViewController.swift in Sources */,
+				95F8CABD26A9E66D00EC26C7 /* VentasBE.swift in Sources */,
 				952FCB66269CBD9800339D09 /* Constantes.swift in Sources */,
 				953BE150269A65B70032EFAF /* CSMWebServiceManager.swift in Sources */,
 				953BE119269A3D250032EFAF /* ViewController.swift in Sources */,
 				952FCB6C269CC07800339D09 /* PickerDateViewController.swift in Sources */,
 				95D0E057269D3A3200F85A33 /* HomeViewController.swift in Sources */,
 				9535C3EC269E63C60017720A /* SplashViewController.swift in Sources */,
+				95F8CABF26A9EBB200EC26C7 /* VentasTableViewCell.swift in Sources */,
 				95D293E2269CF521000B52EA /* AdminBL.swift in Sources */,
+				95F8CAB926A9DC5500EC26C7 /* VentasBL.swift in Sources */,
 				95D293E7269D0AC8000B52EA /* Configuration.swift in Sources */,
+				952A1AE926AC6655009BD9B6 /* PagoTableViewCell.swift in Sources */,
 				95D293E5269CFE15000B52EA /* CDLicencia.swift in Sources */,
+				9530FAFC26AA2A21004D56A0 /* DetailVentasViewController.swift in Sources */,
 				952FCB64269CBD1100339D09 /* UserBE.swift in Sources */,
 				953BE13E269A65390032EFAF /* CSMImageDownloaded.swift in Sources */,
 				953BE136269A648D0032EFAF /* CAYButton.swift in Sources */,
 				95B8E371269E8D9A00FB8C24 /* BalanceBE.swift in Sources */,
+				95CA899F26AFBFC7003F3724 /* AnularaViewController.swift in Sources */,
 				953BE146269A65970032EFAF /* CAYString.swift in Sources */,
 				95D293DA269CF040000B52EA /* AdminWS.swift in Sources */,
 				953BE115269A3D250032EFAF /* AppDelegate.swift in Sources */,
@@ -438,20 +546,28 @@
 				953BE13C269A651A0032EFAF /* CSMImage.swift in Sources */,
 				953BE144269A65630032EFAF /* CAYLabel.swift in Sources */,
 				95E81C66269E98D100A3053E /* HomeTableViewCell.swift in Sources */,
+				9530FB0126AA3C0D004D56A0 /* CheckViewController.swift in Sources */,
+				95F8CABB26A9E63E00EC26C7 /* VentasWS.swift in Sources */,
 				953BE14A269A65A80032EFAF /* CAYTextView.swift in Sources */,
 				953BE152269A679A0032EFAF /* CSMCrypto.swift in Sources */,
 				95D293DE269CF128000B52EA /* GenericResponse.swift in Sources */,
 				953BE142269A654C0032EFAF /* CSMJSON.swift in Sources */,
 				953BE13A269A65130032EFAF /* CAYDateManager.swift in Sources */,
 				95D293E0269CF386000B52EA /* Alert.swift in Sources */,
+				9530FB0326AA3C19004D56A0 /* DocumentosViewController.swift in Sources */,
+				95728F8A26AC94C700D2E6E2 /* FormaDePagoAlertViewController.swift in Sources */,
 				9533AF38269E5FBA005598BA /* CDUsuario.swift in Sources */,
 				952FCB62269CBCF200339D09 /* LoginCollectionViewCell.swift in Sources */,
 				95D0E05A269D3A9E00F85A33 /* MenuViewController.swift in Sources */,
 				953BE140269A65460032EFAF /* CAYImageView.swift in Sources */,
 				95B8E373269E8FF300FB8C24 /* BalanceBL.swift in Sources */,
 				952FCB6E269CC0F200339D09 /* PickerGeneralViewController.swift in Sources */,
+				952A1AE726AC6253009BD9B6 /* CheckTableViewCell.swift in Sources */,
+				95F8CAB726A9DA6C00EC26C7 /* VentasViewController.swift in Sources */,
+				9530FB0526AA3C21004D56A0 /* PagoViewController.swift in Sources */,
 				953BE14C269A65AD0032EFAF /* CSMUserAlters.swift in Sources */,
 				953BE148269A65A20032EFAF /* CAYTextField.swift in Sources */,
+				95F630FD26AB2F3D004AB060 /* ValidationsBL.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

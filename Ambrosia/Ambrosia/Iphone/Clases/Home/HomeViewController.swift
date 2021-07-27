@@ -14,7 +14,7 @@ class HomeViewController: UIViewController {
     @IBOutlet private weak var lblCentral   : UILabel!
     @IBOutlet private weak var lblsec       : UILabel!
     @IBOutlet private weak var lblInicio    : UILabel!
-//    @IBOutlet private weak var lblCierre    : UILabel!
+
     @IBOutlet private weak var lblCajaChica : UILabel!
     
     var objUser = UserBE()
@@ -56,6 +56,12 @@ class HomeViewController: UIViewController {
             controller.delegate = self
             controller.objUse = self.objUser
         }else if let controller = segue.destination as? AdminViewController{
+            controller.delegate = self
+        }else if let controller = segue.destination as? VentasViewController{
+            controller.objResumen = sender as? BalanceResumenBE
+            controller.controller = self
+        }else if let controller = segue.destination as? DetailVentasViewController{
+            controller.objVentas = sender as? VentasBE
             controller.delegate = self
         }
     }
@@ -112,13 +118,16 @@ extension HomeViewController : UITableViewDelegate, UITableViewDataSource{
         
         let cell = tableView.dequeueReusableCell(withIdentifier: identifier, for: indexPath) as! HomeTableViewCell
         
+        cell.controller = self
+        
         cell.objBE = self.arrayResumen[indexPath.row]
         
         return cell
     }
+    
 }
 
-//MARK: -Menu
+//MARK: -Menu Tab
 extension HomeViewController : MenuViewControllerDelegate{
     
     func exitSession(controller: MenuViewController, state: Bool) {
@@ -135,11 +144,10 @@ extension HomeViewController : MenuViewControllerDelegate{
     }
 }
 
-//MARK: -Admin
+//MARK: -Admin Alert Configuration
 extension HomeViewController : AdminViewControllerDelegate{
     
     func reiniciarApp(controller: AdminViewController, state: Bool) {
-        
         if state{
             self.generalSession()
             self.navigationController?.popToRootViewController(animated: true)
@@ -148,3 +156,17 @@ extension HomeViewController : AdminViewControllerDelegate{
         }
     }
 }
+
+//MARK: -VIEW Detail
+extension HomeViewController : DetailVentasViewControllerDelegate{
+    
+    func showDetail(control: DetailVentasViewController) {
+        self.loadBalance()
+    }
+    
+    func showAlert(control: DetailVentasViewController) {
+        self.showAlert(withTitle: Alert.configureServices, withMessage: "", withAcceptButton: Alert.agreedButton, withCompletion: nil)
+    }
+}
+
+

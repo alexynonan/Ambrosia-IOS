@@ -15,10 +15,48 @@ enum CSMAllowTypeText: Int {
     case all
 }
 
+@objc public protocol CAYTextFieldDelegate {
+    @objc optional func textFieldUserDidEndEditing(_ textField: CAYTextField)
+}
+
 @IBDesignable public class CAYTextField: UITextField {
     
-    @IBInspectable public var borderColor : UIColor{
+    @IBOutlet weak open var textFieldDelegate   : CAYTextFieldDelegate?
+    
+    @IBInspectable public var p_errorColor      : UIColor   = .black
+    
+    private var typingTimer                     : DispatchSourceTimer?
+ 
+    public override var text: String?{
+        didSet{
+             self.startTimeOutTyping()
+            self.hideErrorMessage()
+        }
+    }
+    
+    private func startTimeOutTyping() {
         
+        self.cancelTimerKeyboard()
+        self.typingTimer = DispatchSource.makeTimerSource()
+        self.typingTimer?.schedule(deadline: .now() + 1, repeating: 1)
+        self.typingTimer?.setEventHandler(handler: {
+            
+            DispatchQueue.main.async {
+                self.cancelTimerKeyboard()
+                self.textFieldDelegate?.textFieldUserDidEndEditing?(self)
+            }
+        })
+
+        self.typingTimer?.activate()
+    }
+    
+    private func cancelTimerKeyboard(){
+        self.typingTimer?.cancel()
+        self.typingTimer = nil
+    }
+    
+    
+    @IBInspectable public var borderColor : UIColor{
         get{
             if let cgBorderColor = self.layer.borderColor{
                 return UIColor(cgColor: cgBorderColor)
@@ -289,6 +327,100 @@ enum CSMAllowTypeText: Int {
         }
         
         sender.text = result
+    }
+    
+    @IBOutlet public weak var bottomConstraint  : NSLayoutConstraint?
+    
+    private var topLabelErrorConstraint         : NSLayoutConstraint?
+    private var initialBottonConstraintConstant : CGFloat = 0
+    
+    private var errorMessage: String? {
+        didSet{
+            self.lblErrorMessage.alpha  = 1
+            self.lblErrorMessage.text   = self.errorMessage
+        }
+    }
+    
+    private var sizeToErrorMessage : CGSize = .zero
+    public lazy var lblErrorMessage: UILabel = {
+       
+        let lbl             = UILabel()
+        lbl.text            = self.errorMessage
+        lbl.font            = UIFont(name: self.font?.fontName ?? "", size: 11)
+        lbl.textColor       = self.p_errorColor
+        lbl.alpha           = 0
+        lbl.numberOfLines   = 0
+        lbl.lineBreakMode   = .byWordWrapping
+        lbl.translatesAutoresizingMaskIntoConstraints = false
+        return lbl
+    }()
+    
+    
+    public override func awakeFromNib() {
+        
+        super.awakeFromNib()
+        self.addConstraintsToLabelError()
+    }
+    
+    public func showErrorMessageWithText(_ errorMessage: String) {
+        
+        self.errorMessage = errorMessage
+        self.sizeToErrorMessage = self.lblErrorMessage.attributedText?.getSizeToWidth(self.lblErrorMessage.frame.width) ?? .zero
+        
+        UIView.animate(withDuration: 0.3) {
+            self.topLabelErrorConstraint?.constant = 5
+            self.bottomConstraint?.constant = self.initialBottonConstraintConstant + self.sizeToErrorMessage.height + (self.topLabelErrorConstraint?.constant ?? 0)
+            self.getSuperView(self).layoutIfNeeded()
+        }
+    }
+    
+    public func hideErrorMessage() {
+        
+        UIView.animate(withDuration: 0.3) {
+            self.topLabelErrorConstraint?.constant  = -self.sizeToErrorMessage.height
+            self.lblErrorMessage.alpha              = 0
+            self.bottomConstraint?.constant         = self.initialBottonConstraintConstant
+            self.getSuperView(self).layoutIfNeeded()
+        }
+    }
+    
+    private func getSuperView(_ view: UIView) -> UIView {
+        
+        if let newSuperView = view.superview {
+            return self.getSuperView(newSuperView)
+        }
+        
+        return view
+    }
+    
+    private func addConstraintsToLabelError(){
+        
+        if let bottomConstraint = self.bottomConstraint, self.initialBottonConstraintConstant == 0 {
+            
+            self.initialBottonConstraintConstant = bottomConstraint.constant
+            self.superview?.insertSubview(self.lblErrorMessage, belowSubview: self)
+            
+            self.topLabelErrorConstraint = self.lblErrorMessage.topAnchor.constraint(equalTo: self.bottomAnchor, constant: 0)
+            self.topLabelErrorConstraint?.isActive = true
+            self.lblErrorMessage.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 10).isActive = true
+            self.lblErrorMessage.trailingAnchor.constraint(equalTo: self.trailingAnchor, constant: -10).isActive = true
+            self.getSuperView(self).layoutIfNeeded()
+        }
+    }
+}
+
+extension NSAttributedString {
+    
+    public func getSizeToWidth(_ width: CGFloat) -> CGSize {
+        
+        let size = CGSize(width: width, height: CGFloat.greatestFiniteMagnitude)
+        return self.boundingRect(with: size, options: [.usesLineFragmentOrigin], context: nil).size
+    }
+    
+    public func getSizeToHeight(_ height: CGFloat) -> CGSize {
+        
+        let size = CGSize(width: CGFloat.greatestFiniteMagnitude, height: height)
+        return self.boundingRect(with: size, options: [.usesLineFragmentOrigin], context: nil).size
     }
     
 }

@@ -407,6 +407,9 @@
                                                             <real key="value" value="5"/>
                                                         </userDefinedRuntimeAttribute>
                                                     </userDefinedRuntimeAttributes>
+                                                    <connections>
+                                                        <action selector="btnSelect:" destination="Gy2-by-3tn" eventType="touchUpInside" id="Ttn-VD-plC"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -545,6 +548,8 @@
                         <outlet property="tblBalance" destination="6Qs-FR-1JA" id="rvb-yD-a5r"/>
                         <segue destination="Y6W-OH-hqX" kind="presentation" identifier="MenuViewController" id="C20-6z-oq8"/>
                         <segue destination="AZC-fK-gNm" kind="presentation" identifier="AdminViewController" id="SeX-VL-wpT"/>
+                        <segue destination="aZ8-hv-wt7" kind="presentation" identifier="VentasViewController" id="7fU-K2-TrW"/>
+                        <segue destination="fh0-t0-NAq" kind="presentation" identifier="DetailVentasViewController" id="FhZ-rN-KRz"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="5zK-7d-gdS" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
@@ -558,6 +563,26 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="axg-Lp-iTy" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="881" y="567"/>
+        </scene>
+        <!--VentasViewController-->
+        <scene sceneID="IQm-iL-2mc">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Ventas" referencedIdentifier="VentasViewController" id="aZ8-hv-wt7" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="Rfy-cr-RKT"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="A59-qi-clQ" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1493" y="112"/>
+        </scene>
+        <!--DetailVentasViewController-->
+        <scene sceneID="HIN-JW-vpR">
+            <objects>
+                <viewControllerPlaceholder storyboardName="Ventas" referencedIdentifier="DetailVentasViewController" id="fh0-t0-NAq" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="mBU-lQ-73D"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="hgk-HP-j9O" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1493" y="218"/>
         </scene>
     </scenes>
     <designables>

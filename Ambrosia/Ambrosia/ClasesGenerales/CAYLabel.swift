@@ -90,6 +90,22 @@ import UIKit
         }
     }
     
+    @IBInspectable public var underLineText : Bool{
+        get{
+            return self.internalUnderLineText
+        }
+        set(newValue){
+            self.internalUnderLineText = newValue
+            self.createUnderlineText()
+        }
+    }
+    
+    @IBInspectable internal var middleLine: Bool {
+        get { return self.internalMiddlelineText }
+        set { self.internalMiddlelineText = newValue
+            self.updateAttributeTextAppearance() }
+    }
+    
     @IBInspectable public var paddingTop : CGFloat{
         get{
             return self.paddingInsets.top
@@ -127,7 +143,8 @@ import UIKit
     }
     
     fileprivate var paddingInsets = UIEdgeInsets(top: 0, left: 0, bottom: 0, right: 0)
-    
+    fileprivate var internalUnderLineText   = false
+    fileprivate var internalMiddlelineText  = false
     fileprivate var internalSpaceLine : CGFloat = 0.0
     
     fileprivate func setSpaceLineInText(){
@@ -149,6 +166,27 @@ import UIKit
         attributedString.addAttribute(NSAttributedString.Key.paragraphStyle, value:paragraphStyle, range:NSMakeRange(0, attributedString.length))
         
         self.attributedText = attributedString
+    }
+    
+    fileprivate func createUnderlineText(){
+    
+        guard let oldAttributes = self.attributedText else { return }
+        let textContent = self.text ?? ""
+        let newAttributes = NSMutableAttributedString(attributedString: oldAttributes)
+        let range = NSRange(location: 0, length: self.internalUnderLineText ? textContent.count : 0)
+        newAttributes.addAttribute(NSAttributedString.Key.underlineStyle , value: NSUnderlineStyle.single.rawValue, range: range)
+        self.attributedText = newAttributes
+    }
+    
+    fileprivate func updateAttributeTextAppearance() {
+        
+        guard let oldAttributes = self.attributedText else { return }
+        
+        let newAttributes = NSMutableAttributedString(attributedString: oldAttributes)
+        
+        newAttributes.addMiddleline(self.middleLine, color: self.textColor)
+    
+        self.attributedText = newAttributes
     }
     
     open override func awakeFromNib() {
@@ -175,5 +213,32 @@ import UIKit
             contentSize.width += self.paddingInsets.left + self.paddingInsets.right
             return contentSize
         }
+    }
+}
+
+extension NSMutableAttributedString {
+    
+    @discardableResult public func addMiddleline(_ add: Bool, color: UIColor? = nil) -> NSMutableAttributedString {
+    
+        let keyStyle = NSAttributedString.Key.strikethroughStyle
+        let value = NSUnderlineStyle.single.rawValue
+        add ? self.addAttribute(keyStyle, value: value) : self.removeAttribute(keyStyle)
+        
+        guard let color = color else { return self }
+        let keyColor = NSAttributedString.Key.strikethroughColor
+        add ? self.addAttribute(keyColor, value: color) : self.removeAttribute(keyColor)
+        return self
+    }
+    
+    public func addAttribute(_ key: NSAttributedString.Key, value: Any) {
+        
+        let range = NSRange(location: 0, length: self.string.count)
+        self.addAttribute(key, value: value, range: range)
+    }
+    
+    public func removeAttribute(_ key: NSAttributedString.Key) {
+        
+        let range = NSRange(location: 0, length: self.string.count)
+        self.removeAttribute(key, range: range)
     }
 }
